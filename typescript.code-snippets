@@ -45,6 +45,6 @@
   "log finalize of stream": {
     "scope": "typescript",
     "prefix": "finalog",
-    "body": "finalize$1(() => '${2:Stream} finalized')$3"
+    "body": "finalize$1(() => console.log('${2:Stream} finalized'))$3"
   }
 }
