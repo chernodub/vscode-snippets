@@ -1,75 +1,75 @@
 {
-	"private readonly argument": {
-	  "scope": "typescript",
-	  "prefix": "parg",
-	  "body": "${1|private,protected,public|} readonly ${2/([A-Z])/${1:/downcase}/}: $2$3,$4"
-	},
-	"public constructor": {
-	  "scope": "typescript",
-	  "prefix": "pcon",
-	  "body": ["$2", "public constructor(", "  $1", ") {$3}"]
-	},
-	"public readonly": {
-	  "scope": "typescript",
-	  "prefix": "pre",
-	  "body": "public readonly $1"
-	},
-	"public method": {
-	  "scope": "typescript",
-	  "prefix": "pubm",
-	  "body": ["/** $4 */", "public ${1:methodName}($2): $3 {$5}"]
-	},
-	"private method": {
-	  "scope": "typescript",
-	  "prefix": "prm",
-	  "body": ["/** $4 */", "private ${1:methodName}($2): $3 {$5}"]
-	},
-	"console log": {
-	  "scope": "typescript",
-	  "prefix": "clog",
-	  "body": ["console.log($1)$2"]
-	},
-	"tap console log": {
-	  "scope": "typescript",
-	  "prefix": "tlog",
-	  "body": "tap(${1:data} => console.log(${1:data}))$2"
-	},
-	"subject property": {
-	  "scope": "typescript",
-	  "prefix": "subj",
-	  "body": [
-		"/** $6 */",
-		"${1|private,public|} readonly ${2:subject} = new ${3|Subject,ReplaySubject,BehaviorSubject|}<${4:void}>($5);"
-	  ]
-	},
-	"log finalize of stream": {
-	  "scope": "typescript",
-	  "prefix": "finalog",
-	  "body": "finalize$1(() => console.log('${2:Stream} finalized'))$3"
-	},
-	"lambda function": {
-		"scope": "typescript",
-		"prefix": "lam",
-		"body": "($1) => $2"
-	},
-	"lambda function with destructured params": {
-		"scope": "typescript",
-		"prefix": "dlam",
-		"body": "({$1}) => $2"
-	},
-	"lambda function with destructured array params": {
-		"scope": "typescript",
-		"prefix": "alam",
-		"body": "([$1]) => $2"
-	},
-	"shareReplay opearator shortcut": {
-		"scope": "typescript",
-		"prefix": "sr",
-		"body": "shareReplay(${1|{ refCount: true\\, bufferSize: 1 },1|}),"
-	},
-	"Share latest until current instance is destroyed by Angular": {
-		"scope": "typescript",
-		"prefix": "tsr",
-		"body": "takeUntilDestroy(this),\nshareReplay(1),"
-	}
+  "private readonly argument": {
+    "scope": "typescript",
+    "prefix": "parg",
+    "body": "${1|private,protected,public|} readonly ${2/([A-Z])/${1:/downcase}/}: $2$3,$4"
+  },
+  "public constructor": {
+    "scope": "typescript",
+    "prefix": "pcon",
+    "body": ["$2", "public constructor(", "  $1", ") {$3}"]
+  },
+  "public readonly": {
+    "scope": "typescript",
+    "prefix": "pre",
+    "body": "public readonly $1"
+  },
+  "public method": {
+    "scope": "typescript",
+    "prefix": "pubm",
+    "body": ["/** $4 */", "public ${1:methodName}($2): $3 {$5}"]
+  },
+  "private method": {
+    "scope": "typescript",
+    "prefix": "prm",
+    "body": ["/** $4 */", "private ${1:methodName}($2): $3 {$5}"]
+  },
+  "console log": {
+    "scope": "typescript",
+    "prefix": "clog",
+    "body": ["console.log($1)$2"]
+  },
+  "tap console log": {
+    "scope": "typescript",
+    "prefix": "tlog",
+    "body": "tap(${1:data} => console.log(${1:data}))$2"
+  },
+  "subject property": {
+    "scope": "typescript",
+    "prefix": "subj",
+    "body": [
+    "/** $6 */",
+    "${1|private,public|} readonly ${2:subject} = new ${3|Subject,ReplaySubject,BehaviorSubject|}<${4:void}>($5);"
+    ]
+  },
+  "log finalize of stream": {
+    "scope": "typescript",
+    "prefix": "finalog",
+    "body": "finalize$1(() => console.log('${2:Stream} finalized'))$3"
+  },
+  "lambda function": {
+    "scope": "typescript",
+    "prefix": "lam",
+    "body": "($1) => $2"
+  },
+  "lambda function with destructured params": {
+    "scope": "typescript",
+    "prefix": "dlam",
+    "body": "({$1}) => $2"
+  },
+  "lambda function with destructured array params": {
+    "scope": "typescript",
+    "prefix": "alam",
+    "body": "([$1]) => $2"
+  },
+  "shareReplay opearator shortcut": {
+    "scope": "typescript",
+    "prefix": "sr",
+    "body": "shareReplay(${1|{ refCount: true\\, bufferSize: 1 },1|}),"
+  },
+  "Share latest until current instance is destroyed by Angular": {
+    "scope": "typescript",
+    "prefix": "tsr",
+    "body": "takeUntilDestroy(this),\nshareReplay(1),"
+  }
 }
